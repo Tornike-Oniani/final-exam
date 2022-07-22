@@ -1,5 +1,7 @@
 global using FinalExam.Domain.Models;
+global using FinalExam.Domain.Services;
 global using FinalExam.Infrastructure;
+using FinalExam.Infrastructure.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -11,6 +13,8 @@ builder.Services.AddRazorPages();
 
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+
+builder.Services.AddScoped<IProductService, ProductService>();
 
 var app = builder.Build();
 

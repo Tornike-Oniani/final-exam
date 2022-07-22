@@ -1,5 +1,4 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace FinalExam.Server.Controllers
 {
@@ -7,18 +6,18 @@ namespace FinalExam.Server.Controllers
 	[ApiController]
 	public class ProductController : ControllerBase
 	{
-		private readonly DataContext _context;
+		private readonly IProductService _productService;
 
-		public ProductController(DataContext context)
+		public ProductController(IProductService productService)
 		{
-			this._context = context;
+			this._productService = productService;
 		}
 
 		[HttpGet]
-		public async Task<IActionResult> Get()
+		public async Task<ActionResult<ServiceResponse<List<Product>>>> Get()
 		{
-			var products = await _context.Products.ToListAsync();
-			return Ok(products);
+			var result = await _productService.GetProductsAsync();
+			return Ok(result);
 		}
 	}
 }
