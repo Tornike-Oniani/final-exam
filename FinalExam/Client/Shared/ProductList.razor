@@ -1,5 +1,6 @@
 ﻿@using FinalExam.Client.Services.ProductService
 @inject IProductService ProductService
+@implements IDisposable
 
 <h3>ProductList</h3>
 
@@ -35,8 +36,14 @@ else
 @code {
 	private static List<ProductViewModel> Products = new List<ProductViewModel>();
 
-	protected override async Task OnInitializedAsync()
+	protected override void OnInitialized()
 	{
-		await ProductService.GetProducts();
+		// Rerender if the products have been changed
+		ProductService.ProductsChanged += StateHasChanged;
+	}
+
+	public void Dispose()
+	{
+		ProductService.ProductsChanged -= StateHasChanged;
 	}
 }

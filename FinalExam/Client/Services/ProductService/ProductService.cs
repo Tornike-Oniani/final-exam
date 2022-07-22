@@ -9,13 +9,19 @@
 			this._http = http;
 		}
 
+		public event Action ProductsChanged;
+
 		public List<ProductViewModel> Products { get; set; } = new List<ProductViewModel>();
 
-		public async Task GetProducts()
+		public async Task GetProducts(string? categoryUrl = null)
 		{
-			var result = await _http.GetFromJsonAsync<ServiceResponseViewModel<List<ProductViewModel>>>("api/product");
+			var result = categoryUrl == null ?
+			await _http.GetFromJsonAsync<ServiceResponseViewModel<List<ProductViewModel>>>("api/product") :
+			await _http.GetFromJsonAsync<ServiceResponseViewModel<List<ProductViewModel>>>($"api/product/category/{categoryUrl}");
 			if (result != null && result.Data != null)
 				Products = result.Data;
+
+			ProductsChanged.Invoke();
 		}
 		public async Task<ServiceResponseViewModel<ProductViewModel>> GetProduct(int productId)
 		{

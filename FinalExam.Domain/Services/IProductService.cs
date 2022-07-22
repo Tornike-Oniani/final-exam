@@ -6,5 +6,6 @@ namespace FinalExam.Domain.Services
 	{
 		Task<ServiceResponse<List<Product>>> GetProductsAsync();
 		Task<ServiceResponse<Product>> GetProductsAsync(int productId);
+		Task<ServiceResponse<List<Product>>> GetProductsByCategoryAsync(string categoryUrl);
 	}
 }
