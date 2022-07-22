@@ -13,9 +13,14 @@
 
 		public async Task GetProducts()
 		{
-			var result = await _http.GetFromJsonAsync<ServiceResponseViewModel<List<ProductViewModel>>>("api/Product");
+			var result = await _http.GetFromJsonAsync<ServiceResponseViewModel<List<ProductViewModel>>>("api/product");
 			if (result != null && result.Data != null)
 				Products = result.Data;
+		}
+		public async Task<ServiceResponseViewModel<ProductViewModel>> GetProduct(int productId)
+		{
+			var result = await _http.GetFromJsonAsync<ServiceResponseViewModel<ProductViewModel>>($"api/product/{productId}");
+			return result;
 		}
 	}
 }
