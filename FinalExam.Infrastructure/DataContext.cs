@@ -18,7 +18,7 @@ namespace FinalExam.Infrastructure
         {
             if (!options.IsConfigured)
             {
-                options.UseSqlServer("data source=DESKTOP-7QTMVQM;initial catalog=BlazorEcommerce;trusted_connection=true");
+                options.UseSqlServer("data source=.;initial catalog=FinalExam;trusted_connection=true");
             }
         }
 
