@@ -1,4 +1,6 @@
-﻿namespace FinalExam.Domain.Models
+﻿using System.ComponentModel.DataAnnotations.Schema;
+
+namespace FinalExam.Domain.Models
 {
     public class Product
     {
@@ -6,6 +8,7 @@
         public string Title { get; set; } = String.Empty;
         public string Description { get; set; } = String.Empty;
         public string ImageUrl { get; set; } = String.Empty;
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
     }
 }
