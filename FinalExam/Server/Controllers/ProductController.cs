@@ -31,20 +31,20 @@ namespace FinalExam.Server.Controllers
             var result = await _productService.GetProductsByCategoryAsync(categoryUrl);
             return Ok(result);
         }
-        [HttpGet("search/{searchText}")]
-        public async Task<ActionResult<ServiceResponse<Product>>> SearchProducts(string searchText)
+        [HttpGet("search/{searchText}/{page}")]
+        public async Task<ActionResult<ServiceResponse<ProductSearchResult>>> SearchProducts(string searchText, int page = 1)
         {
-            var result = await _productService.SearchProductsAsync(searchText);
+            var result = await _productService.SearchProductsAsync(searchText, page);
             return Ok(result);
         }
         [HttpGet("searchsuggestions/{searchText}")]
-        public async Task<ActionResult<ServiceResponse<Product>>> SearchSuggestions(string searchText)
+        public async Task<ActionResult<ServiceResponse<List<string>>>> SearchSuggestions(string searchText)
         {
             var result = await _productService.GetProductSearchSuggestionsAsync(searchText);
             return Ok(result);
         }
         [HttpGet("featured")]
-        public async Task<ActionResult<ServiceResponse<Product>>> GetFeaturedProducts()
+        public async Task<ActionResult<ServiceResponse<List<Product>>>> GetFeaturedProducts()
         {
             var result = await _productService.GetFeaturedProducts();
             return Ok(result);

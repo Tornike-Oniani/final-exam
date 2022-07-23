@@ -9,6 +9,7 @@
   <ItemGroup>
     <ProjectReference Include="..\FinalExam.Domain\FinalExam.Domain.csproj" />
     <ProjectReference Include="..\FinalExam.Infrastructure\FinalExam.Infrastructure.csproj" />
+    <ProjectReference Include="..\FinalExam.Shared\FinalExam.Shared.csproj" />
   </ItemGroup>
 
 </Project>
