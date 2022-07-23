@@ -13,7 +13,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinalExam.Infrastructure", 
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinalExam.Application", "FinalExam.Application\FinalExam.Application.csproj", "{CA15308C-FF8C-4322-8DB6-793163828A69}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalExam.Shared", "FinalExam.Shared\FinalExam.Shared.csproj", "{15646A79-7738-4676-B6EC-BA00BC87FBE0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinalExam.Shared", "FinalExam.Shared\FinalExam.Shared.csproj", "{15646A79-7738-4676-B6EC-BA00BC87FBE0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
