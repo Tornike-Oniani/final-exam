@@ -8,6 +8,7 @@
         public string ImageUrl { get; set; } = String.Empty;
         public CategoryViewModel? Category { get; set; }
         public int CategoryId { get; set; }
+        public bool Featured { get; set; } = false;
         public List<ProductVariantViewModel> Variants { get; set; } = new List<ProductVariantViewModel>();
     }
 }
