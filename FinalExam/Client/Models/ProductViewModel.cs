@@ -6,6 +6,8 @@
         public string Title { get; set; } = String.Empty;
         public string Description { get; set; } = String.Empty;
         public string ImageUrl { get; set; } = String.Empty;
-        public decimal Price { get; set; }
+        public CategoryViewModel? Category { get; set; }
+        public int CategoryId { get; set; }
+        public List<ProductVariantViewModel> Variants { get; set; } = new List<ProductVariantViewModel>();
     }
 }
