@@ -42,7 +42,7 @@
 
         public async Task<List<string>> GetProductSearchSuggestions(string searchText)
         {
-            var result = await _http.GetFromJsonAsync<ServiceResponseViewModel<List<string>>>($"api/product/searchsuggestions{searchText}");
+            var result = await _http.GetFromJsonAsync<ServiceResponseViewModel<List<string>>>($"api/product/searchsuggestions/{searchText}");
             return result.Data;
         }
     }

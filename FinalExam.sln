@@ -3,15 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.1.32421.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalExam.Server", "FinalExam\Server\FinalExam.Server.csproj", "{A4E0E840-71BA-4119-B927-0400935E72C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinalExam.Server", "FinalExam\Server\FinalExam.Server.csproj", "{A4E0E840-71BA-4119-B927-0400935E72C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalExam.Client", "FinalExam\Client\FinalExam.Client.csproj", "{BECBAFDE-2086-4970-8C30-C74D99078656}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinalExam.Client", "FinalExam\Client\FinalExam.Client.csproj", "{BECBAFDE-2086-4970-8C30-C74D99078656}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalExam.Domain", "FinalExam.Domain\FinalExam.Domain.csproj", "{A21BC129-DFF2-4364-A1EC-AC5AE070AADB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinalExam.Domain", "FinalExam.Domain\FinalExam.Domain.csproj", "{A21BC129-DFF2-4364-A1EC-AC5AE070AADB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalExam.Infrastructure", "FinalExam.Infrastructure\FinalExam.Infrastructure.csproj", "{6B22CB41-1DD7-4766-A9F8-134609F51D30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinalExam.Infrastructure", "FinalExam.Infrastructure\FinalExam.Infrastructure.csproj", "{6B22CB41-1DD7-4766-A9F8-134609F51D30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FinalExam.Application", "FinalExam.Application\FinalExam.Application.csproj", "{CA15308C-FF8C-4322-8DB6-793163828A69}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FinalExam.Application", "FinalExam.Application\FinalExam.Application.csproj", "{CA15308C-FF8C-4322-8DB6-793163828A69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
