@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FinalExam.Application.DTOs;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FinalExam.Server.Controllers
 {

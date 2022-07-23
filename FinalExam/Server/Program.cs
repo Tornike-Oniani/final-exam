@@ -1,9 +1,7 @@
 global using FinalExam.Application.Services.Abstract;
 global using FinalExam.Domain.Models;
-global using FinalExam.Domain.Services;
 global using FinalExam.Infrastructure;
 using FinalExam.Application.Services.Concrete;
-using FinalExam.Infrastructure.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 

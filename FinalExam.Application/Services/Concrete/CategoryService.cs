@@ -1,8 +1,10 @@
-﻿using FinalExam.Domain.Models;
-using FinalExam.Domain.Services;
+﻿using FinalExam.Application.DTOs;
+using FinalExam.Application.Services.Abstract;
+using FinalExam.Domain.Models;
+using FinalExam.Infrastructure;
 using Microsoft.EntityFrameworkCore;
 
-namespace FinalExam.Infrastructure.Services
+namespace FinalExam.Application.Services.Concrete
 {
 	public class CategoryService : ICategoryService
 	{

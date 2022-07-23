@@ -1,4 +1,5 @@
-﻿using FinalExam.Domain.Models;
+﻿using FinalExam.Application.DTOs;
+using FinalExam.Domain.Models;
 
 namespace FinalExam.Application.Services.Abstract
 {

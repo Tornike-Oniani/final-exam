@@ -1,23 +1,24 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using FinalExam.Application.DTOs;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FinalExam.Server.Controllers
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class CartController : ControllerBase
-    {
-        private readonly ICartService _cartService;
+	[Route("api/[controller]")]
+	[ApiController]
+	public class CartController : ControllerBase
+	{
+		private readonly ICartService _cartService;
 
-        public CartController(ICartService cartService)
-        {
-            this._cartService = cartService;
-        }
+		public CartController(ICartService cartService)
+		{
+			this._cartService = cartService;
+		}
 
-        [HttpPost("products")]
-        public async Task<ActionResult<ServiceResponse<List<CartProductResponse>>>> GetCartProducts(List<CartItem> cartItems)
-        {
-            var result = await _cartService.GetCartProducts(cartItems);
-            return Ok(result);
-        }
-    }
+		[HttpPost("products")]
+		public async Task<ActionResult<ServiceResponse<List<CartProductResponse>>>> GetCartProducts(List<CartItem> cartItems)
+		{
+			var result = await _cartService.GetCartProducts(cartItems);
+			return Ok(result);
+		}
+	}
 }

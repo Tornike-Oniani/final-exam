@@ -1,4 +1,4 @@
-﻿namespace FinalExam.Domain.Models
+﻿namespace FinalExam.Application.DTOs
 {
 	public class ServiceResponse<T>
 	{
